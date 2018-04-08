@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>图片预加载</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+
+        html , body {
+            width: 100%;
+            height:100%;
+        }
+
+        *::selection {
+            background: none;
+        }
+
+        #imgBox {
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 10px;
+            border:1px solid #ccc;
+            color: #333;
+            text-decoration: none;
+        }
+
+
+        .loading {
+            position: fixed;
+            top:0;
+            left: 0;
+            width:100%;
+            height: 100%;
+            background: #eeeeee;
+
+        }
+        .progress {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 300px;
+        }
+
+        .none {
+            display:  none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="imgBox">
+        <img id="img" src="images/loading/1.jpg" alt="" width="1200px" height="800px">
+        <p>
+            <a href="javascript:void(0);" class="btn" data-control="prev">上一张</a>
+            <a href="javascript:void(0);" class="btn" data-control="next">下一张</a>
+        </p>
+    </div>
+
+    <div class="loading none">
+        <p class="progress">0%</p>
+    </div>
+
+
+    <a href="javascript:void(0)" id="face-btn">表情</a>
+    <div class="panel">
+        <p class="loading">表情加载中，请稍后...</p>
+        <!--<ul class="list-group">
+            <li class="list-group-item"><img src="<face/QQ/1.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/2.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/3.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/4.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/5.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/6.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/7.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/8.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/9.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/10.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/11.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/12.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/13.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/14.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/15.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/16.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/17.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/18.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/19.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/20.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/21.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/22.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/23.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/24.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/25.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/26.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/27.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/28.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/29.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/30.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/31.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/32.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/33.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/34.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/35.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/36.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/37.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/38.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/39.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/40.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/41.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/42.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/43.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/44.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/45.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/46.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/47.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/48.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/49.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/50.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/51.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/52.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/53.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/54.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/55.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/56.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/57.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/58.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/59.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/60.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/61.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/62.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/63.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/64.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/65.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/66.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/67.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/68.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/69.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/70.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/71.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/72.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/73.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/74.gif" alt=""></li>
+            <li class="list-group-item"><img src="<face/QQ/75.gif" alt=""></li>
+        </ul>-->
+    </div>
+
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/preload.js"></script>
+    <script >
+
+        var imgs = [
+
+            "images/loading/1.jpg",
+            "images/loading/2.jpg",
+            "images/loading/3.jpg",
+            "images/loading/4.jpg",
+            "images/loading/5.jpg"
+
+        ];
+        var index = 0,
+            len = imgs.length,
+            count = 0,
+            $progress =  $('progress');
+        
+        // $.each( imgs , function ( i , src) {
+        //     var  imgObj = new Image();
+        //     $(imgObj).on ('load error' , function () {
+        //         $progress.html(Math.round(count + 1) / len * 100  +'%');
+        //
+        //         if (count >= len - 1) {
+        //             $('div.loading').hide();
+        //         }
+        //         count ++ ;
+        //     })
+        //
+        //     imgObj.src = src;
+        // })
+
+
+        $.preload(imgs , {
+            each: function (count) {
+                $progress.html(Math.round(count + 1) / len * 100  +'%');
+            },
+            all :function () {
+                $('div.loading').hide();
+            }
+        });
+
+
+        $('.btn').on('click' , function () {
+            if ($(this).data('control') === 'prev') {
+                index = Math.max( 0 , -- index );
+            } else {
+                index = Math.min( len - 1 , ++ index );
+            }
+            $('#img').attr('src' , imgs[index]);
+        })
+
+
+        function load () {
+
+            var imgObj = new Image();
+
+            $(imgObj).on('load error' , function() {
+
+                if ( count >= len ) {
+
+                } else {
+                  load();
+                }
+
+
+            });
+
+            imgObj.src = imgs[count];
+        }
+
+     </script>
+</body>
+</html>

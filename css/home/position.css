@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+*::selection {
+  background: none;
+}
+
+#positionMain {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+}
+
+#positionMain .main {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/*topPic start */
+
+#positionMain .main #pos-topPic {
+  background: url(../../images/position/topPic.jpg) no-repeat ;
+  height: 47px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+
+/*topPic end*/
+
+#positionMain .main #pos-menu {
+  width: 1000px;
+  height: 100%;
+
+}
+
+
+/*left-menu start*/
+
+#positionMain .main #pos-menu .pos-left {
+  width: 245px;
+  height: 100%;
+  padding: 23px 0 0 0 ;
+}
+
+#positionMain .main #pos-menu .pos-left .left-item {
+  width: 185px;
+  height: 49px;
+  line-height: 49px;
+  background:url(../../images/position/default-jt.png) no-repeat 24px center;
+}
+
+#positionMain .main #pos-menu .pos-left .left-item  a {
+  display: inline-block;
+  width: 185px;
+  color: #676767;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+#positionMain .main #pos-menu .pos-left .left-item  a:hover {
+  text-decoration: underline;
+  color: #DE3535;
+}
+
+#positionMain .main #pos-menu .pos-left .select{
+  background:#DE3535 url(../../images/position/select-jt.jpg) no-repeat 24px center;
+}
+
+#positionMain .main #pos-menu .pos-left .select a{
+  color: #ffffff;
+}
+
+#positionMain .main #pos-menu .pos-left .select a:hover{
+  text-decoration: underline;
+  color: #ffffff;
+}
+/*left-menu end*/
+
+
+/*pos-right start */
+
+#positionMain .main #pos-menu .pos-right{
+  width: 755px;
+  height: 100%;
+}
+
+#positionMain .main #pos-menu .pos-right .r-title{
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  position: relative;
+}
+
+#positionMain .main #pos-menu .pos-right .r-title .icon-img{
+  width: 27px;
+  height: 70px;
+  display: inline-block;
+  line-height: 70px;
+  position: absolute;
+  background: url(../../images/position/main_hicon.jpg) no-repeat center center;
+}
+
+#positionMain .main #pos-menu .pos-right .r-title h5 {
+   width: 100%;
+   height: 70px ;
+   line-height: 70px;
+   display: inline;
+   padding-left: 32px;
+   font-size: 25px;
+   color: #DE3535;
+}
+
+#positionMain .main #pos-menu .pos-right .r-title h5 span {
+  display: inline-block ;
+  font-size: 16px;
+  color: #999;
+  font-weight: normal;
+  padding: 3px 3px 0 0;
+  height: 40px;
+}
+
+#positionMain .main #pos-menu .pos-right  .r-content {
+  width: 100%;
+  height: 495px;
+  background:url(../../images/position/jobProcess.jpg) no-repeat 4px 8px;
+}
+
+/*pos-right end */
+
+
+/*招聘导航 start */
+
+#positionMain .main #pos-menu .pos-right .r-nav {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  background-color: #DE3535;
+  text-align: center;
+  border-top: 2px solid #DE3535;
+}
+
+#positionMain .main #pos-menu .pos-right  .r-nav a {
+  display: inline-block;
+  font-size: 16px;
+  width: 100px;
+  height: 28px;
+  line-height: 28px;
+  color: #ffffff;
+  text-align: center;
+}
+
+#positionMain .main #pos-menu .pos-right  .r-nav .active {
+  border-radius: 16px;
+  border: 1px solid #fd6b24;
+  background-color: #CC0000;
+}
+
+#positionMain .main #pos-menu .pos-right #zp-view {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  border-top:1px solid #f2f2f2;
+}
+
+#positionMain .main #pos-menu .pos-right #zp-view ul {
+
+  width: 212px;
+  overflow: hidden;
+  float: left;
+  display: inline-block;
+  margin: 0;
+
+}
+
+#positionMain .main #pos-menu .pos-right #zp-view li {
+  width: 197px;
+  height: 36px;
+  line-height: 36px;
+  padding-left: 10px;
+  border: 1px solid #f2f2f2;
+  background-color: #f8f8f8;
+  border-left: 3px solid #E7E7E7;
+  border-top: none;
+  overflow: hidden;
+  font-size: 1.2em;
+}
+
+#positionMain .main #pos-menu .pos-right #zp-view  li:hover {
+  border-left: 3px solid #CC0000;
+  background: none;
+  color: #CC0000;
+  font-weight: bolder;
+}
+
+#positionMain .main #pos-menu .pos-right #zp-view .zp-active {
+  border-left: 3px solid #CC0000;
+  border-right: none;
+  background: none;
+  color: #CC0000;
+  font-weight: bolder;
+}
+
+#positionMain .main #pos-menu .pos-right #zp-view li:last-child {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+#positionMain .main #pos-menu .pos-right #zp-view .zp-right {
+  margin-left: 240px;
+  width: 500px;
+}
+
+#positionMain .main #pos-menu .pos-right #zp-view .zp-right .jb {
+  margin-top: 12px;
+}
+
+#positionMain .main #pos-menu .pos-right #zp-view .zp-right .posHeadline {
+ font-size: 1.6em;
+  height: 50px;
+  line-height: 50px;
+}
+
+#positionMain .main #pos-menu .pos-right #zp-view .zp-right p {
+  line-height: 30px;
+  font-size: 1.2em;
+}
+/*招聘导航 end */
+

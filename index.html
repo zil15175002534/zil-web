@@ -1,0 +1,618 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>酒仙网、葡萄酒馆</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="css/basic.css" rel="stylesheet" type="text/css">
+    <link href="css/home/index.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+
+    <!--页头横条  start -->
+    <div class="top-nav">
+        <div class="top-nav-con">
+            <div class="con-left">
+                <p class="top-nav-font-col">欢迎来酒仙网！</p>
+                <a href="" class="top-nav-font-col">请登录</a>
+                <a href="" class="top-nav-font-col">免费注册</a>
+            </div>
+            <div class="con-right">
+                <ul>
+                    <li id="myjx-nav">
+                        <a href="#" class="top-nav-font-col">我的酒仙 <i class="publicIcon1"></i></a>
+                        <div id="myjx">
+                            <ul>
+                                <li class="clear"><a href="#" class="top-nav-font-col">我的订单</a></li>
+                                <li class="clear"><a href="#" class="top-nav-font-col">物流跟踪</a></li>
+                                <li class="clear"><a href="#" class="top-nav-font-col">我的优惠券</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="top-nav-font-col">CEO邮箱</a></li>
+                    <li><a href="#" class="top-nav-font-col"><i class="publicIcon2"></i> 购物车0件</a></li>
+                    <li><a href="#" class="top-nav-font-col top-red ">CLUB会员</a><s></s></li>
+                    <li><a href="#" class="top-nav-font-col">招商入驻</a><s></s></li>
+                    <li><a href="#" class="top-nav-font-col"><span class="bk-red" style="padding: 1px 2px"><i class="publicIcon3"></i> 手机逛酒仙</span></a><s></s></li>
+                    <li><a href="#" class="top-nav-font-col"><i class="publicIcon4"></i> 网站导航 <i class="publicIcon5"></i></a></li>
+                    <li><a href="#" class="top-nav-font-col"><i class="publicIcon6"></i> 客户服务<i class="publicIcon7"></i></a></li>
+                    <li class="top-nav-font-col">客服热线 <span class="top-weight top-red">400-617-9999</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var oMyjxnav = document.getElementById("myjx-nav"),
+            oMyjx = document.getElementById("myjx"),
+            publicIcon1 = document.getElementsByClassName("publicIcon1")[0];
+            oMyjxnav.onmouseover = function () {
+                var _this = this;
+                _this.style.background = "#ffffff";
+                publicIcon1.style.transform = "rotate(180deg)";
+                oMyjx.style.display = 'block';
+                _this.onmouseout = function () {
+                    _this.style.background = "#F2F2F2";
+                    oMyjx.style.display = 'none';
+                    publicIcon1.style.transform = "rotate(360deg)";
+                }
+            }
+    </script>
+    <!--页头横条 end  -->
+
+
+     <!--导航、搜索  start -->
+    <div class="nav-search">
+        <div class="nav-container">
+
+            <div class="brand-logo fL">
+                <img src="images/home/logo.png" alt="logo">
+            </div>
+
+            <div class="website-name fL">
+                <img src="images/home/wineLogo.png" alt="wine">
+            </div>
+
+            <div class="search-div fL">
+                <form action="" class="searche-from">
+                    <input name="" type="text" class="search-from-input fL" />
+                    <input name="" type="submit" class="search-from-btn fL" value="搜索"/>
+                </form>
+                <div class="clear"></div>
+                <div class="search-hot-nav">
+                    <ul>
+                        <li class="search-hot fL nav-search-font-col ">热门搜索：</li>
+                        <li class="search-hot fL"><a href="" class="nav-search-font-col">茉莉花</a></li>
+                        <li class="search-hot fL"><a href="" class="nav-search-font-col">黄尾袋鼠</a></li>
+                        <li class="search-hot fL"><a href="" class="nav-search-font-col">拉菲系列</a></li>
+                        <li class="search-hot fL"><a href="" class="nav-search-font-col">奔富系列</a></li>
+                        <li class="search-hot fL"><a href="" class="nav-search-font-col">名庄</a></li>
+                        <li class="search-hot fL"><a href="" class="nav-search-font-col">人头马</a></li>
+                        <li class="search-hot fL"><a href="" class="nav-search-font-col">百加得</a></li>
+                        <li class="search-hot fL"><a href="" class="nav-search-font-col">思慕</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="shop-car fL">
+                <i class="shop-car-icon fL"></i>
+                <span class="shop-car-desc">购物车</span>
+                <s class="shop-count">0</s>
+            </div>
+
+
+        </div>
+    </div>
+     <!--导航、搜索  end -->
+
+    <!--carousel 展示区 start-->
+    <div class="carousel-view">
+        <div class="carousel-nav">
+            <div class="nav-content">
+                 <div class="commodity-type fL">
+                     <h2>全部商品分类</h2>
+                     <div class="commodity-type-content">
+                         <ul>
+                             <li>
+                                 <div class="wine-hover-view">
+                                     <h3><i class="wine-icon1"></i><span>葡萄酒</span></h3>
+                                     <div class="wine-type">
+                                         <p>
+                                             <a href="">法国</a>
+                                             <a href="">德国</a>
+                                             <a href="">意大利</a>
+                                             <a href="">西班牙</a>
+                                         </p>
+                                         <p>
+                                             <a href="">美乐</a>
+                                             <a href="">西拉</a>
+                                             <a href="">霞多丽</a>
+                                         </p>
+                                     </div>
+                                 </div>
+                             </li>
+                             <li>
+                                 <div class="wine-hover-view" data-id="wine-hover-item1">
+                                     <h3><i class="wine-icon1"></i><span>葡萄酒</span></h3>
+                                     <div class="wine-type">
+                                         <p>
+                                             <a href="" class="">法国</a>
+                                             <a href="">德国</a>
+                                             <a href="">意大利</a>
+                                             <a href="">西班牙</a>
+                                         </p>
+                                         <p>
+                                             <a href="">美乐</a>
+                                             <a href="">西拉</a>
+                                             <a href="">霞多丽</a>
+                                         </p>
+                                     </div>
+                                 </div>
+                             </li>
+
+                             <li>
+                                 <div class="wine-hover-view">
+                                     <h3><i class="wine-icon1"></i><span>葡萄酒</span></h3>
+                                     <div class="wine-type">
+                                         <p>
+                                             <a href="">法国</a>
+                                             <a href="">德国</a>
+                                             <a href="">意大利</a>
+                                             <a href="">西班牙</a>
+                                         </p>
+                                         <p>
+                                             <a href="">美乐</a>
+                                             <a href="">西拉</a>
+                                             <a href="">霞多丽</a>
+                                         </p>
+                                     </div>
+                                 </div>
+                             </li>
+
+                             <li>
+                                 <div class="wine-hover-view">
+                                     <h3><i class="wine-icon1"></i><span>葡萄酒</span></h3>
+                                     <div class="wine-type">
+                                         <p>
+                                             <a href="">法国</a>
+                                             <a href="">德国</a>
+                                             <a href="">意大利</a>
+                                             <a href="">西班牙</a>
+                                         </p>
+                                         <p>
+                                             <a href="">美乐</a>
+                                             <a href="">西拉</a>
+                                             <a href="">霞多丽</a>
+                                         </p>
+                                     </div>
+                                 </div>
+                             </li>
+
+                             <li>
+                                 <div class="wine-hover-view">
+                                     <h3><i class="wine-icon1"></i><span>葡萄酒</span></h3>
+                                     <div class="wine-type">
+                                         <p>
+                                             <a href="">法国</a>
+                                             <a href="">德国</a>
+                                             <a href="">意大利</a>
+                                             <a href="">西班牙</a>
+                                         </p>
+                                         <p>
+                                             <a href="">美乐</a>
+                                             <a href="">西拉</a>
+                                             <a href="">霞多丽</a>
+                                         </p>
+                                     </div>
+                                 </div>
+                             </li>
+                         </ul>
+                     </div> <!-- .commodity-type-content -->
+                 </div> <!--  .commodity-type  -->
+                <div class="wine-hover-item" id="wine-hover-item1">
+                    <div class="item-view">
+                        <h4>品种</h4>
+                        <p>
+                            <a href="">白兰地</a>
+                            <a href="">威士忌</a>
+                            <a href="">朗姆酒</a>
+                            <a href="">美乐</a>
+                            <a href="">西拉</a>
+                            <a href="">霞多丽</a>
+                            <a href="">美乐</a>
+                            <a href="">西拉</a>
+                            <a href="">霞多丽</a>
+                            <a href="">美乐</a>
+                            <a href="">西拉</a>
+                            <a href="">霞多丽</a>
+                            <a href="">美乐</a>
+                        </p>
+                    </div>
+                    <div class="item-view">
+                        <h4>品种</h4>
+                        <p>
+                            <a href="">白兰地</a>
+                            <a href="">威士忌</a>
+                            <a href="">朗姆酒</a>
+                            <a href="">美乐</a>
+                            <a href="">西拉</a>
+                            <a href="">霞多丽</a>
+                            <a href="">美乐</a>
+                            <a href="">西拉</a>
+                            <a href="">霞多丽</a>
+                            <a href="">美乐</a>
+                            <a href="">西拉</a>
+                            <a href="">霞多丽</a>
+                            <a href="">美乐</a>
+                        </p>
+                    </div>
+                    <div class="item-view">
+                        <h4>品种</h4>
+                        <p>
+                            <a href="">白兰地</a>
+                            <a href="">威士忌</a>
+                            <a href="">朗姆酒</a>
+                            <a href="">美乐</a>
+                            <a href="">西拉</a>
+                            <a href="">霞多丽</a>
+                            <a href="">美乐</a>
+                            <a href="">西拉</a>
+                            <a href="">霞多丽</a>
+                            <a href="">美乐</a>
+                            <a href="">西拉</a>
+                            <a href="">霞多丽</a>
+                            <a href="">美乐</a>
+                        </p>
+                    </div>
+                </div>
+                <!--<div class="wine-hover-item"></div>-->
+                <!--<div class="wine-hover-item"></div>-->
+                <!--<div class="wine-hover-item"></div>-->
+                <!--<div class="wine-hover-item"></div>-->
+
+                <ul class="nav-channel fL">
+                    <li class="channel-item fL"><a href="" class="channel-active" >首页</a></li>
+                    <li class="channel-item fL"><a href="">精品闪购</a></li>
+                    <li class="channel-item fL"><a href="">整箱特惠</a></li>
+                    <li class="channel-item fL"><a href="">礼盒特惠</a></li>
+                    <li class="channel-item fL"><a href="">海外直采</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="web-main" id="webMain">
+
+        <!--轮播图  banner start-->
+        <div class="banner-box" id="bannerBox">
+
+        </div>
+        <!--轮播图  banner  end -->
+
+        <!--楼层导航 start -->
+        <div class="nav-fix-floor" id="fixFloor">
+            <ul>
+                <li class="floor-one">
+                    <a class="floor-desc-one" href="#">实惠选择</a>
+                    <i class="floor-one"></i>
+                </li>
+                <li class="floor-two">
+                    <a class="floor-desc-two" href="#">活动专区</a>
+                    <i class="floor-two"></i>
+                </li>
+                <li class="floor-three">
+                    <a class="floor-desc-three" href="#">品牌</a>
+                    <i class="floor-three"></i>
+                </li>
+                <li class="floor-four">
+                    <a class="floor-desc-four" href="#">葡萄酒</a>
+                    <i class="floor-four"></i>
+                </li>
+                <li class="floor-five">
+                    <a class="floor-desc-five" href="#">酒具</a>
+                    <i class="floor-five"></i>
+                </li>
+                <li class="floor-six">
+                    <a class="floor-desc-six" href="#">洋酒</a>
+                    <i class="floor-six"></i>
+                </li>
+                <li class="floor-seven">
+                    <a class="floor-desc-seven" href="#">啤酒</a>
+                    <i class="floor-seven"></i>
+                </li>
+            </ul>
+        </div>
+        <!--楼层导航 end -->
+
+        <!--实惠区  start -->
+        <div class="sh-main" id="shMain">
+
+            <div class="sh-left">
+                <h3>实惠选择</h3>
+                <div class="sh-view">
+                    <ul>
+                        <li class="fL">
+                            <div class="pic">
+                                <img src="images/home/sh-view1.jpg" alt="">
+                            </div>
+                            <div class="wine-name">
+                                <a href="" title="法国黑马兄弟卡奥尔AOC干红葡萄酒1000ml（双支装）">
+                                    法国黑马兄弟卡奥尔AOC干红葡萄酒1000ml（双支装）
+                                </a>
+                            </div>
+                            <div class="wine-price">
+                                ￥139.00
+                            </div>
+                            <div class="wine-count-down" >
+                                <div class="count">
+                                    <i cass="cd"></i>
+                                    <span>距结束</span>
+                                    <b class="h"><s class="hh"></s></b>
+                                    <b class="m"><s class="mm"></s></b>
+                                    <b class="s"><s class="ss"></s></b>
+                                </div>
+                                <div class="btn-buy" style="display: none" >
+                                    立即购买
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="fL">
+                            <div class="pic">
+                                <img src="images/home/sh-view2.jpg" alt="">
+                            </div>
+                            <div class="wine-name">
+                                <a href="" title="法国黑马兄弟卡奥尔AOC干红葡萄酒1000ml（双支装）">
+                                    法国黑马兄弟卡奥尔AOC干红葡萄酒1000ml（双支装）
+                                </a>
+                            </div>
+                            <div class="wine-price">
+                                ￥139.00
+                            </div>
+                            <div class="wine-count-down">
+                                <div class="count">
+                                    <i cass="cd"></i>
+                                    <span>距结束</span>
+                                    <b class="h"><s class="hh"></s></b>
+                                    <b class="m"><s class="mm"></s></b>
+                                    <b class="s"><s class="ss"></s></b>
+                                </div>
+                                <div class="btn-buy" style="display: none" >
+                                    立即购买
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="fL">
+                            <div class="pic">
+                                <img src="images/home/sh-view3.jpg" alt="">
+                            </div>
+                            <div class="wine-name">
+                                <a href="" title="法国黑马兄弟卡奥尔AOC干红葡萄酒1000ml（双支装）">
+                                    法国黑马兄弟卡奥尔AOC干红葡萄酒1000ml（双支装）
+                                </a>
+                            </div>
+                            <div class="wine-price">
+                                ￥139.00
+                            </div>
+                            <div class="wine-count-down">
+                                <div class="count">
+                                    <i cass="cd"></i>
+                                    <span>距结束</span>
+                                    <b class="h"><s class="hh"></s></b>
+                                    <b class="m"><s class="mm"></s></b>
+                                    <b class="s"><s class="ss"></s></b>
+                                </div>
+                                <div class="btn-buy" style="display: none" >
+                                    立即购买
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="fL">
+                            <div class="pic">
+                                <img src="images/home/sh-view4.jpg" alt="">
+                            </div>
+                            <div class="wine-name">
+                                <a href="" title="法国黑马兄弟卡奥尔AOC干红葡萄酒1000ml（双支装）">
+                                    法国黑马兄弟卡奥尔AOC干红葡萄酒1000ml（双支装）
+                                </a>
+                            </div>
+                            <div class="wine-price">
+                                ￥139.00
+                            </div>
+                            <div class="wine-count-down">
+                                <div class="count">
+                                    <i cass="cd"></i>
+                                    <span>距结束</span>
+                                    <b class="h"><s class="hh"></s></b>
+                                    <b class="m"><s class="mm"></s></b>
+                                    <b class="s"><s class="ss"></s></b>
+                                </div>
+                                <div class="btn-buy" style="display: none" >
+                                    立即购买
+                                </div>
+                            </div>
+                        </li>
+                        <li class="fL">
+                            <div class="pic">
+                                <img src="images/home/sh-view5.jpg" alt="">
+                            </div>
+                            <div class="wine-name">
+                                <a href="" title="法国黑马兄弟卡奥尔AOC干红葡萄酒1000ml（双支装）">
+                                    法国黑马兄弟卡奥尔AOC干红葡萄酒1000ml（双支装）
+                                </a>
+                            </div>
+                            <div class="wine-price">
+                                ￥139.00
+                            </div>
+                            <div class="wine-count-down">
+                                <div class="count">
+                                    <i cass="cd"></i>
+                                    <span>距结束</span>
+                                    <b class="h"><s class="hh"></s></b>
+                                    <b class="m"><s class="mm"></s></b>
+                                    <b class="s"><s class="ss"></s></b>
+                                </div>
+                                <div class="btn-buy" style="display: none" >
+                                    立即购买
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="sh-right">
+                <h3>推荐</h3>
+                <div class="tj-view">
+                    <img src="images/home/sh-view6.jpg" alt="特卖">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+
+            var oMain = document.getElementById("shMain");
+            var arrDown =  oMain.getElementsByClassName("wine-count-down");
+            for (var i = 0 ;i <arrDown.length ; i++) {
+                arrDown[i].onmouseover = function () {
+                    var _this = this;
+                    var arrDinv = _this.getElementsByTagName("div");
+                    console.log(arrDinv);
+                    arrDinv[0].style.display = "none";
+                    arrDinv[1].style.display = "block";
+
+                    _this.onmouseout = function () {
+                        arrDinv[1].style.display = "none";
+                        arrDinv[0].style.display = "block";
+                    }
+                }
+            }
+
+            window.onload = function (ev) {
+                autoTime();
+            }
+            function autoTime () {
+                var hh = document.getElementsByClassName("hh");
+                var mm = document.getElementsByClassName("mm");
+                var ss = document.getElementsByClassName("ss");
+
+                var endTime = new Date("2018,4/2,00:00:00");
+                var nowTime = new Date();
+                var leftTime = parseInt((endTime.getTime() - nowTime.getTime())/1000);
+                var d = parseInt(leftTime/(24 * 60 * 60 ));
+                var h = parseInt(leftTime/(60*60) % 24);
+                var m = parseInt(leftTime/60 % 60);
+                var s = parseInt(leftTime%60);
+
+
+                for (var i=0; i < hh.length ; i++) {
+                    hh[i].innerHTML = h;
+                    mm[i].innerHTML = m;
+                    ss[i].innerHTML = s;
+                };
+                if ( leftTime <= 0 ) {
+                    hh[i].innerHTML = "00";
+                    mm[i].innerHTML = "00";
+                    ss[i].innerHTML = "00";
+                }else {
+                    setTimeout( autoTime , 500 );
+                };
+            }
+        </script>
+        <!--实惠区 end-->
+
+        <!--活动区 start -->
+        <div class="hd-main" id="hdMain">
+           <div class="hd-nav">
+               <div class="border-div">
+               <h3>活动专区</h3>
+               <div class="nav-group fR">
+                   <ul>
+                       <li class="nav-item fL"><a href="#" class="item-active">送礼</a></li>
+                       <li class="nav-item fL"><a href="">自饮</a></li>
+                       <li class="nav-item fL"><a href="">套装</a></li>
+                       <li class="nav-item fL"><a href="">新品</a></li>
+                   </ul>
+               </div>
+               </div>
+               <div class="hd-view">
+                   <div class="hd-first fL">
+                       <div class="carousel">
+
+                       </div>
+                       <div class="hd-brand">
+                           <p><a href="">杜隆</a><a href="">智力猫</a><a href="">杰克丹尼</a></p>
+                           <p><a href="">真露</a><a href="">香奈</a><a href="">木桐</a></p>
+                           <p><a href="">真露</a><a href="">香奈</a><a href="">木桐</a></p>
+                       </div>
+                   </div>
+                   <div class="hd-two fL">
+                       <div class="brand">
+                            <img src="images/home/hd-1.jpg" alt="brand">
+                       </div>
+                       <div class="brand-type">
+
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <!--活动区 end -->
+
+    </div>
+    <script type="text/javascript">
+        
+        var arrWineMenu = document.getElementsByClassName("wine-hover-view");
+        for (var i=0 ; i < arrWineMenu.length; i++ ) {
+
+            arrWineMenu[i].onmouseover = function () {
+
+                var _this = this;
+                var oH3 = _this.getElementsByTagName("h3")[0],
+                    arrA = _this.getElementsByTagName("a"),
+                    val = _this.getAttribute("data-id"),
+                    item = document.getElementById(val);
+
+
+                item.style.display = "block";
+                _this.style.backgroundColor = "#ffffff";
+                oH3.style.color = "#0f0f0f";
+                for(var j=0 ; j<arrA.length; j++){
+                    arrA[j].style.color = "#0f0f0f";
+                }
+                var istrue = false;
+
+                _this.onmouseout = function () {
+                    item.onmouseenter = function () {
+                        istrue = true;
+                        item.onmouseleave = function () {
+                            restore (oH3 , arrA, item, _this );
+                        }
+                    }
+
+                    if (!istrue) {
+                        restore (oH3 , arrA, item, _this );
+                    }
+
+                }
+            }
+        }
+
+        function restore (oH3 , arrA , item , _this) {
+            oH3.style.color = "#ffffff";
+            for(var j=0 ; j<arrA.length; j++){
+                arrA[j].style.color = "#CCCCCC";
+            }
+            item.style.display = "none";
+            _this.style.backgroundColor = "";
+        }
+    </script>
+    <!--carousel 展示区 end-->
+
+
+</body>
+</html>
