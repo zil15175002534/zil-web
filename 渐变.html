@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>渐变兼容</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="css/basic.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #div1{ width:200px; height: 200px; border: 1px solid #cccccc;
+
+            background: linear-gradient(top , red , yellow ); /* top 标识从上往下渐变*/
+            background: -webkit-linear-gradient(top , red , yellow ); /* 谷歌 */
+            background: -moz-linear-gradient(top , red , yellow ); /* 火狐 */
+            background: -o-linear-gradient(top , red , yellow ); /* Opera */
+            background: -ms-linear-gradient(top , red , yellow ); /* ie 10以上 */
+            /* ie 9 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient( GradientType=0,startColorstr=red, endColorstr=yellow )";
+            +background:#ff7a00; /* ie7或 IE6*/
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1">
+    </div>
+</body>
+</html>

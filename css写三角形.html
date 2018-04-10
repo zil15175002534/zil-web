@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>css实现三角形，兼容IE6</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="css/basic.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #div1{ width:200px; height: 200px; border: 1px solid #cccccc;
+            background: #4cae4c;
+
+        }
+
+        #div1::after {
+            position: absolute;
+            height: 0;
+            width: 0;
+            content: "";
+            top: 200px;
+            left: 85px;
+            bottom: 0;
+            margin-left: -5px;
+            border: 10px solid transparent;
+            /* ie6 不兼容 transparent 把边框都设置为透明，
+            然后让底部的边框为其他颜色 就会显示为三角形*/
+            border-bottom-color: #821;
+            overflow:hidden;
+
+            /* 兼容IE6 */
+            _border: 10px solid #ffffff;
+            _border-bottom-color: #821;
+            /* 兼容IE6 */
+
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1">
+    </div>
+</body>
+</html>
