@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>选项卡</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="css/basic.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+
+
+        #container {
+            height: 250px;
+            width: 500px;
+            margin: 100px auto;
+
+        }
+
+        .tab {
+            position: relative;
+            padding: 0 20px;
+            border-bottom: 1px solid #dadada;
+            height: 50px;
+        }
+
+        .tab ul {
+            height: 51px;
+            margin-bottom: -1px;
+            position: relative;
+        }
+
+        .tab li {
+            float: left;
+            border: 1px solid #dadada;
+            border-radius: 4px 4px 0 0 ;
+            height: 49px;
+            line-height: 49px;
+            width: 150px;
+            text-align: center;
+            margin-right: -1px;
+        }
+
+        .tab .active {
+            border-bottom-color: #ffffff;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div class="tab">
+            <ul>
+                <li>男装</li>
+                <li class="active">女装</li>
+                <li>美妆</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
