@@ -5,13 +5,16 @@
     <title>轮播图</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="css/basic.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <style type="text/css">
+
         .main {
             width: 1200px;
             height: 460px;
             margin: 0 auto;
             overflow: hidden;
             position: relative;
+            top: 100px;
         }
 
         .banner {
@@ -82,20 +85,235 @@
         }
 
         .prev {
-            left: 2px;
+            display: none;
+            left: 245px;
         }
 
         .next {
+            display: none;
             right: 2px;
         }
+
+        .menu {
+            width: 244px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .menu-box {
+            height: 460px;
+            z-index: 1;
+            background: rgba( 7 , 17 ,27 ,0.7);
+            opacity: 0.5;
+        }
+
+        .menu-content {
+            height: 454px;
+            z-index: 2;
+            padding: 6px 0 0 0 ;
+        }
+
+        .menu-item {
+            height: 64px;
+            line-height: 64px;
+            font-size: 16px;
+            padding: 0 24px;
+        }
+
+        .menu-item a:link ,
+        .menu-item a:visited {
+            color: #ffffff;
+        }
+
+        .menu-item a {
+            display: block;
+            height: 61px;
+            border-bottom: 1px solid rgba(255 , 255 , 255, 0.2);
+            padding: 0 8px;
+            position: relative;
+        }
+
+        .menu-item a i {
+            position: absolute;
+            right: 3px;
+            font-family: 'FontAwesome';
+            top:22px;
+            font-style: normal;
+            font-weight: normal;
+            color: rgba(255 , 255 , 255 , 0.5);
+        }
+
+        .sub-menu {
+            height: 458px;
+            width: 730px;
+            border: 1px solid #ccc;
+            background: rgba(255,255,255,0.7);
+            position: absolute;
+            left: 244px;
+            top: 0;
+            z-index: 2;
+            box-shadow: 0 3px 20px 0 rgba(0,0,0,0.2);
+        }
+
+        .inner-box {
+            height: 100%;
+            width: 100%;
+            display: none;
+        }
+
+        .sub-inner-box {
+            width: 652px;
+            margin-left: 40px;
+            overflow: hidden;
+        }
+
+        .title {
+            margin: 20px 0 ;
+            color: #ac2925;
+        }
+
+        .menu-row {
+            position: relative;
+        }
+
+        .menu-row dl {
+            position: relative;
+            padding: 6px 0 ;
+        }
+
+        .menu-row dl dt {
+            position: absolute;
+            width: 80px;
+            overflow: hidden;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .menu-row dl dd {
+           padding: 0 0 0 80px;
+           position:relative;
+        }
+
+        .menu-row dl dd a {
+            padding: 0 8px;
+            position:relative;
+            letter-spacing: 1px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .menu-row dl dd a:hover {
+            color: #ac2925;
+        }
+
+        .menu-row dl dd a::after {
+            position: absolute;
+            content: "";
+            top:0;
+            right: 0;
+            width: 1px;
+            height: 14px;
+            background: #000000;
+        }
+
+        .menu-row dl dd a:last-child::after {
+            content: "";
+            background:rgba( 255 , 255, 255, 0);
+        }
+
+        .none {
+            display: none;
+        }
+
+
     </style>
 </head>
 <body>
 
     <div class="main"  id="main">
+
+        <div class="menu menu-box"></div>
+
+        <div class="sub-menu none" id="sub-menu">
+
+            <div class="inner-box">
+                <div class="sub-inner-box ">
+                    <h2 class="title">手机配件1</h2>
+                    <div class="menu-row">
+                        <dl class="menu-dl">
+                            <dt>手机配件：</dt>
+                            <dd>这想法水电费</dd>
+                        </dl>
+                        <dl class="menu-dl">
+                            <dt>手机维修：</dt>
+                            <dd><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner-box">
+                <div class="sub-inner-box ">
+                    <h2 class="title">手机配件2</h2>
+                    <div class="menu-row">
+                        <dl class="menu-dl">
+                            <dt>手机配件：</dt>
+                            <dd>这想法水电费</dd>
+                        </dl>
+                        <dl class="menu-dl">
+                            <dt>手机维修：</dt>
+                            <dd><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner-box">
+                <div class="sub-inner-box ">
+                    <h2 class="title">手机配件3</h2>
+                    <div class="menu-row">
+                        <dl class="menu-dl">
+                            <dt>手机配件：</dt>
+                            <dd>这想法水电费</dd>
+                        </dl>
+                        <dl class="menu-dl">
+                            <dt>手机维修：</dt>
+                            <dd><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner-box">
+                <div class="sub-inner-box ">
+                    <h2 class="title">手机配件4</h2>
+                    <div class="menu-row">
+                        <dl class="menu-dl">
+                            <dt>手机配件：</dt>
+                            <dd>这想法水电费</dd>
+                        </dl>
+                        <dl class="menu-dl">
+                            <dt>手机维修：</dt>
+                            <dd><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a><a>配件</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="menu menu-content" id="menu-content">
+            <div class="menu-item"><a href=""><span>手机配件1</span><i class="fa fa-angle-right"></i></a></div>
+            <div class="menu-item"><a href=""><span>手机配件2</span><i class="fa fa-angle-right"></i></a></div>
+            <div class="menu-item"><a href=""><span>手机配件3</span><i class="fa fa-angle-right"></i></a></div>
+            <div class="menu-item"><a href=""><span>手机配件4</span><i class="fa fa-angle-right"></i></a></div>
+        </div>
+
+        <div class="banner-slide slide1 select-active"></div>
         <div class="banner" id="banner">
             <a href="#">
-                <div class="banner-slide slide1 select-active"></div>
+                <div class="banner-slide slide1"></div>
             </a>
             <a href="#">
                 <div class="banner-slide slide2"></div>
@@ -123,6 +341,19 @@
          return  typeof(id) === 'string' ? document.getElementById(id) : id;
         }
 
+        function getByClass( oParent ,className) {
+
+            var aEle = oParent.getElementsByTagName("*");
+            var arr = [];
+            for (var i=0; i<aEle.length; i++) {
+                if (aEle[i].className == className) {
+                    arr.push(aEle[i]);
+                }
+            }
+            return arr;
+        }
+
+
         var index = 0,
             timer = null,
             pics = byId("banner").getElementsByTagName("div"),
@@ -130,16 +361,28 @@
             prev = byId("prev"),
             next = byId("next"),
             dots = byId("dots").getElementsByTagName("span"),
-            current = 0;
+            current = 0,
+            menu = byId("menu-content"),
+            subMenu = byId("sub-menu"),
+            innerBox = getByClass( subMenu , "inner-box"),
+            menus = getByClass( menu , "menu-item");
+
+
+
 
         function slideImg () {
-
+            console.log(innerBox.length);
             var oMain = byId("main");
             oMain.onmouseover = function () {
+                prev.style.display = "block";
+                next.style.display = "block";
+
                 clearInterval(timer);
             };
 
             oMain.onmouseout = function () {
+                prev.style.display = "none";
+                next.style.display = "none";
                 timer = setInterval( function () {
                     index ++ ;
                    if (index >= len ) {
@@ -180,6 +423,35 @@
                 }
                 changImg ();
             }
+
+            for (var m=0; m<menus.length; m++ ) {
+                menus[m].setAttribute("data-index" , m);
+                menus[m].onmouseover = function () {
+                    subMenu.className = "sub-menu";
+                    var idx = this.getAttribute("data-index");
+                    for (var j =0 ;j < innerBox.length ; j++) {
+                        innerBox[j].style.display = "none";
+                        menus[j].style.background = "none";
+                    }
+
+                    innerBox[idx].style.display = "block";
+                    menus[idx].style.background = "rgba(0,0,0,0.2)";
+                };
+            }
+
+
+            menu.onmouseout = function () {
+                subMenu.className = "sub-menu none";
+            };
+
+            subMenu.onmouseover = function () {
+                subMenu.className = "sub-menu";
+            };
+
+            subMenu.onmouseout = function () {
+                subMenu.className = "sub-menu none";
+            };
+
         }
 
         function  changImg() {
@@ -189,7 +461,8 @@
             dots[current].className = "";
             current = index;
         }
-        slideImg();
+
+        slideImg()
     </script>
 </body>
 </html>
