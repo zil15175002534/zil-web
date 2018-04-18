@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wifi</title>
+
+    <style>
+        body {
+            background: #ac2925;
+        }
+        /*div {*/
+            /*float: left;*/
+            /*border: solid 2px;*/
+            /*border-color: #0f0f0f transparent transparent transparent;*/
+            /*padding: 3px;*/
+            /*border-radius: 50%;*/
+        /*}*/
+
+        #div1 {
+
+            margin: 0 auto;
+            height: 6px;
+            width: 20px;
+            border: 1px solid #0f0f0f;
+            border-radius: 2px;
+            position: relative;
+            box-shadow: 1px 0 0 #f1eaea , inset 0 0 0 1px #ffffff;
+        }
+
+        #div2 {
+            width: 18px;
+            height: 4px;
+            position: relative;
+            top: 1px;
+            left: 1px;
+            background: #0f0f0f;
+            border-radius: 1px;
+
+        }
+
+        #div1::after {
+            content: "";
+            width: 4px;
+            height: 4px;
+            background: linear-gradient( to right , transparent 0 ,transparent 50%, #0f0f0f 50% ,#0f0f0f 100% );
+            position: absolute;
+            right: -4px;
+            top: 1px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+<!--<div>-->
+    <!--<div>-->
+        <!--<div></div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<div id="div1">
+    <div id="div2"></div>
+</div>
+
+
+
+</body>
+</html>

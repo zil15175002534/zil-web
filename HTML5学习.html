@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML5学习</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="css/basic.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+   <figure>
+       <img src="" alt="">
+       <figcaption> 标题，只能是和figure同时使用</figcaption>
+       <p>是一些描述性的信息</p>
+   </figure>
+
+    <section>
+        定义文档中的某一个区块
+            建议section中只出现 标题（h1~h6）和内容（p）,还可以使用img
+            一般的时候，可以用在一些展示性的列表（有标题和段落，或者有标题段落和图片）
+    </section>
+
+
+   一个搜索框的下拉
+    <input type="text" list="abcd">
+    <datalist id="abcd">
+        <option value="123">移动</option>
+        <option value="124">联通</option>
+        <option value="125"></option>
+        <option value="126"></option>
+        <option value="127"></option>
+    </datalist>
+
+    用户补充细节（显示详细信息）
+    <details open>
+        <summary>标题</summary>
+        这是展示的内容
+    </details>
+
+
+   网页的音频
+        过去网页是用flash文件
+   <audio src="" controls >
+        <source src=".ogg" type="audio/ogg">
+        <source src=".mp3" type="audio/mpeq">
+        <source src=".wav" type="audio/wav">
+        您的浏览器不支持audio元素
+   </audio>
+    <!--
+        src      音频的文件路径
+        controls 显示浏览器自带的控制条（每个浏览器都不一样）
+        autoplay 自动播放
+        muted    静音
+        preload  预加载
+            ·开启了以后，会和网页并行加载
+            ·如果开启了autoplay自动就是预加载的
+        loop     循环
+
+
+
+        href和src区别：
+            href可以并行加载 （css）link一次性的请求  10条或者是5条
+            src 代替资源， 当文件没有加载完成的时候，不会进行后面的操作。
+
+
+
+        音频格式兼容：
+            ·mp3 \ wav \ ogg
+            ·source 多格式支持
+                   ·ogg 和 mp3 足以满足要求
+                   ·浏览器选择一个可用格式
+
+
+        格式转换：
+            格式工厂
+    -->
+
+    网页视屏
+   <video src="">
+       <source src=".mp4" type='video/mp4;codecs="avc1.42E01E,mp4a.40.2"'>
+       <source src=".ogv" type='video/ogg;codecs="theora,vorbis"'>
+       <source src=".webm" type='video/webm;codecs="vp8,vorbis"'>
+       您的浏览器不支持audio元素
+   </video>
+
+    <!--
+        poster    封面，就是一张图片
+        width
+        height
+    -->
+
+
+   HTML5 新增的类型
+   <input type="text">
+    <!--
+        过去的类型  ： text password button submit radio checkbox file rest
+
+        HTML5 ：
+            date ，number {
+                        · 类似于购物的加减框
+                        · max \ min \ step （合法数字间隔）、value 默认值
+                        · 移动端会自动变成数字键
+                             }
+            range
+            search 自带一个x
+            url
+            tel
+     -->
+
+
+   HTML5 新增的属性
+   <input type="text" >
+    <!--
+        autofocus      自动获取焦点（搜素的时候用的比较多）
+        autocomplete   是否自动完成表单  on / off
+        pattern         正则 [0-9]
+
+
+        IOS 专用
+        autocapitalize = "off"   关闭首字母大写
+        autocorrect = "off"      关闭ios输入自动修正
+
+    -->
+
+
+
+   选择器
+   不兼容 IE 9 以下
+    a > b  获取得是第一层子元素
+    a + b  获取某个元素紧邻的元素（同辈元素）
+    a ~ b  匹配某个元素以后的兄弟元素
+
+
+    ::first-letter
+    ::first-line
+    ::selection
+    :target
+
+   属性选择器
+    div[class]
+
+
+
+
+    弹性布局  -webkit-box \  flex
+
+
+   <style>
+
+       .list {
+           display: -webkit-box; /* 开启弹性布局 */
+           -webkit-box-align: end;/* 垂直对齐方式*/
+           -webkit-box-pack: start; /* 水平对齐方式*/
+           -webkit-box-orient:  vertical;
+           /* 排列方式  默认是水平
+                horizontal  水平
+                vertical    垂直
+           */
+
+
+           /*
+            display : flex ;  也是弹性布局 开启弹性布局
+            -webkit-flex-direction:  排列方式
+                row     水平方向，起点在左端
+                row-reverse 水平方向，起点在右端
+                column  垂直方向，起点在上沿
+                column-reverse 垂直方向，起点在下沿
+
+            比例
+            -webkit-flex-shrink
+            0 不参与收缩
+            1 默认参与收缩
+
+            扩展比例
+            -webkit-flex-grow
+            0 默认不扩展
+
+            换行
+            flex-wrap
+
+            对齐方式
+            justify-content : 水平对齐
+            align-items:  垂直对齐
+
+            最小空间
+            flex-basis
+
+            缩写
+            flex ： 1 2 3 ;  flex-grow(扩展)   flex-shrink(收缩)   flex-basis(最小)
+
+
+            兼容性问题
+
+
+            user-modify:
+            user-select:
+
+           */
+       }
+
+       .list li {
+           -webkit-box-flex: 1;  /*  平分剩余的宽度每个咱一份  */
+
+
+           flex: 1;  /* 也是平均分配  均分宽度 每一份占一份  */
+       }
+
+
+
+
+   </style>
+
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+
+</body>
+</html>
