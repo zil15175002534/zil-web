@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery表格可拖动调整改变列宽度特效 在线演示下载 www.thinkcss.com</title>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+table{empty-cells:show;border-collapse:collapse;border-spacing:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+
+.thinkcss{width:660px;margin:40px auto}
+.thinkcss h2{font-size:18px;height:52px;color:#3366cc;text-align:center;}
+.listext{ width:660px}
+.listext th{background:#eee;color:#3366cc;}
+.listext th,.listext td{border:solid 1px #ddd;text-align:left;padding:10px;font-size:14px;}
+
+.rc-handle-container{position:relative;}
+.rc-handle{position:absolute;width:7px;cursor:ew-resize;*cursor:pointer;margin-left:-3px;}
+
+
+#n{margin:10px auto; width:920px; border:1px solid #CCC;font-size:12px; line-height:30px;}
+#n a{ padding:0 4px; color:#333}
+</style>
+</head>
+<body>
+<p>&nbsp;</p>
+<p id="n"><a href="http://www.thinkcss.com/">CSS</a>
+<a href="http://www.thinkcss.com/">thinkcss</a>：
+<a href="http://www.thinkcss.com/html/">Html基础</a>
+<a href="http://www.thinkcss.com/htmlrumen/">html入门</a>
+<a href="http://www.thinkcss.com/css/">CSS基础</a>
+<a href="http://www.thinkcss.com/cssrumen/">CSS入门</a>
+<a href="http://www.thinkcss.com/jianrong/">网页兼容</a>
+<a href="http://www.thinkcss.com/texiao/">CSS特效</a>
+<a href="http://www.thinkcss.com/mokuai/">CSS模块</a>
+<a href="http://www.thinkcss.com/wenti/">CSS经验</a>
+<a href="http://www.thinkcss.com/tools/">CSS工具</a>
+<a href="http://www.thinkcss.com/jiqiao/">CSS技巧</a>
+<a href="http://www.thinkcss.com/w3c/">web标准规范</a>
+<a href="http://www.thinkcss.com/work/">css基础作业</a>
+<a href="http://www.thinkcss.com/muban/">网页模板</a></p>
+<p>&nbsp;</p>
+<p style="font-size:22px"><a href="http://www.thinkcss.com/texiao/1387.shtml">CSS布局table表格可拖拽改变宽度的特效</a>设置实例如下：</p>
+<!-- 实例 代码 开始 -->
+
+<div class="thinkcss">
+	<h2>jQuery拖动调整表格列宽度</h2>
+	<table width="100%" class="table listext" data-resizable-columns-id="demo-table">
+		<thead>
+			<tr>
+				<th width="6%">序</th>
+				<th width="21%" >标题</th>
+                <th width="41%">内容</th>
+				<th width="32%"  data-noresize>说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>标题名称</td>
+				<td>可拖拽</td>
+                <td>最后一列加data-noresize所以不能拖动</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>thinkcss下载特效</td>
+				<td>表格间隔可拖拽</td>
+                <td>www.thinkcss.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>标题名称</td>
+                <td>可拖拽调整表格宽度</td>
+                <td>css jq特效</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jq.resizableColumns.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("table").resizableColumns({});
+});
+</script>
+
+<!-- 代码 结束 -->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="center">返回下载 <a href="http://www.thinkcss.com/texiao/1387.shtml">可拖拽调整表格列宽度特效</a>：<a href="http://www.thinkcss.com/texiao/1387.shtml">http://www.thinkcss.com/texiao/1387.shtml</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="center"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- n728 --><ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6057706211967641" data-ad-slot="8787106124"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></p>
+<p>&nbsp;</p>
+</body>
+</html>
